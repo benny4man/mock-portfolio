@@ -258,6 +258,7 @@ footer img {
 
 @media (max-width: 1000px) {
 	.banner{
+		background-color: #599753;
 		height: 550px;
 		width: 100%;
 	}
