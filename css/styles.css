@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+	/* suppress browser defaults and select alt box model */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*sets alt box model*/
+	font-family: "Poppins", sans-serif, Tahoma;
+	/* set variables for colors */
+	--bg-primary: #4ea9b9;
+	--bg-secondary: #ffeed7;
+	--font-color-primary: #26413c;
+	--font-color-secondary: #030812;
+	--backup-color: #4baeff;
+	--input-border: #e5e7eb;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #474747;
+}
+
+main,
+footer {
+	max-width: 1200px;
+}
+
+main {
+	background-color: #fff;
+	z-index: 0;
+}
+
+.banner {
+	background-color: var(--bg-primary);
+	height: 400px;
+	width: 1200px;
+	transform: skew(0deg, -10deg);
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	z-index: 2;
+	top: -110px;
+}
+
+.work {
+	padding: 20px 30px;
+}
+
+.hero {
+	display: flex;
+	z-index: 3;
+	position: relative;
+	width: clamp(800px, 90%, 90%);
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.hero .img-container {
+	display: flex;
+	justify-content: center;
+	width: clamp(300px, 30svw, 400px);
+	height: fit-content;
+	margin: auto 0;
+	position: relative;
+}
+
+.img-container img{
+	width: clamp(300px, 30svw, 400px);
+	height: fit-content;
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.img-container p {
+	position: absolute;
+	bottom: .1rem;
+	font-size: 3rem;
+	color: #5a5a5a;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
+	margin: 0 auto;
+}
+
+.hero .about {
+	display: flex;
+	flex-direction: column;
+	gap: 1.3em;
+	padding: 1.4em 1em;
+	background-color: #fff;
+	margin: 40px 0px;
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+	font-family: "Baskervville", serif;
+	font-weight: 500;
+	transform: scaleY(1.2);
+	font-size: 2em;
+}
+
+.hero .desc {
+	color: #474747;
+}
+
+.hero .socials-container {
+	margin-top: auto;
+	display: flex;
+	gap: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.hero .socials-container > a:nth-child(1) {
+	margin-left: auto;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.hero .socials-container i {
+	font-size: 1.8em;
+}
+
+.work {
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 0% 150px 0%;
+	margin: 0 auto;
+	margin-top: 10em;
+	width: clamp(0px, 90%, 90%);
+}
+
+.grid-container {
+	margin-top: 10px;
+	resize: both;
+	display: grid;
+	gap: 30px;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	height: 350px;
+	width: 300px;
+	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+	flex: 3 0%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #5a5a5a;
+	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+	color: #fff;
+}
+
+/* #region card background colors */
+.card:nth-of-type(1) img {
+	background-color: #c93d3d;
+}
+
+.card:nth-of-type(2) img {
+	background-color: #565fdb;
+}
+
+.card:nth-of-type(3) img {
+	background-color: #599753;
+}
+
+.card:nth-of-type(4) img {
+	background-color: #d36d9d;
+}
+
+.card:nth-of-type(5) img {
+	background-color: #bd6d39;
+}
+
+.card:nth-of-type(6) img {
+	background-color: #3d81af;
+}
+/* #endregion */
+
+.card .card-lower {
+	flex: 2 0%;
+	padding: 8px 20px;
+}
+
+.card .card-lower .card-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	gap: 0.8em;
+}
+
+.card .card-lower .card-nav i {
+	font-size: 1.5em;
+}
+
+.card .card-lower .card-nav > p {
+	font-size: 1.4em;
+	font-weight: 500;
+	font-family: "Baskervville", serif;
+}
+
+.card .card-lower > p {
+	margin-top: 5px;
+	color: #5a5a5a;
+}
+
+.card .card-lower .card-nav a:first-of-type {
+	margin-left: auto;
+}
+
+footer {
+	background-color: var(--bg-primary);
+	display: flex;
+	gap: 4em;
+	padding: 40px 5%;
+}
+
+footer img {
+	max-height: 400px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	gap: 20px;
+}
+
+.contact-phone, .contact-email{
+	display: flex;
+	gap: 10px;
+}
+
+.contact-phone i, .contact-email i{
+	color: #fff;
+}
+.contact .socials-container{
+	display: flex;
+	flex-direction: row;
+	gap: .8rem;
+	font-size: 1.8rem;
+}
+
+
+@media (max-width: 1000px) {
+	.banner{
+		height: 550px;
+	}
+	.hero{
+		flex-direction: column;
+		width: clamp(100px, 90%, 90%);
+		margin-top: 40px;
+	}
+	.hero .img-container{
+		margin: 0 auto;
+	}
+	.hero .about{
+		margin: -20px 0 0 0;
+	}
+	.work > p{
+		text-align: center;
+	}
+	footer{
+		flex-direction: column;
+		width: 100vw;
+	}
+	footer img{
+		width: clamp(300px, 90svw, 600px);
+		height: fit-content;
+		margin: 0 auto;
+	}
+};
