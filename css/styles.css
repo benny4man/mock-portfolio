@@ -259,6 +259,7 @@ footer img {
 @media (max-width: 1000px) {
 	.banner{
 		height: 550px;
+		width: 100vw;
 	}
 	.hero{
 		flex-direction: column;
